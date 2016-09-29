@@ -1,0 +1,27 @@
+[Fire{
+Objects:hooks on wall,lava,rocks,cathedral forge;
+RoomAdjectives:hot,obsidian vloor,charred,smells of brimstone,impossible;
+TrapMechanisms:melting,charring;
+Creatures:afrit,ghouls;
+DoorAdjectives:Old,gnarled,dusty,clean;
+ObjectAdjectives:charred,flaming,burnished,composed of tungsten and iridium;
+}
+ssasa
+[Dark{
+Objects:hooks on wall,lava,rocks,cathedral forge;
+RoomAdjectives:hot,obsidian vloor,charred,smells of brimstone,impossible;
+TrapMechanisms:melting,charring;
+Creatures:afrit,ghouls;
+DoorAdjectives:Old,gnarled,dusty,clean;
+ObjectAdjectives:charred,flaming,burnished,composed of tungsten and iridium;
+}
+sdgcfdghjl'
+
+[Kak{
+Objects:hooks on wall,lava,rocks,cathedral forge;
+RoomAdjectives:hot,obsidian vloor,charred,smells of brimstone,impossible;
+TrapMechanisms:melting,charring;
+Creatures:afrit,ghouls;
+DoorAdjectives:Old,gnarled,dusty,clean;
+ObjectAdjectives:charred,flaming,burnished,composed of tungsten and iridium;
+}

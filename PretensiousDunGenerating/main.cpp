@@ -42,7 +42,23 @@ enum FSM_Process_States{
     DOORADJS,
     CHECK_STATE
 };
-void CopyInText(vector<string>& strBuffer,string& fcurStr,char fcurChar,FSM_Process_States& fcurState){
+void PrintTheme(Theme ftheme){
+            cout << ftheme.theme<< endl;
+            for(int j = 0;j<ftheme.objadjs.size();j++)cout << ftheme.objadjs[j]<< endl;
+             cout << endl;
+            for(int j = 0;j<ftheme.objs.size();j++)cout << ftheme.objs[j]<< endl;
+            cout << endl;
+            for(int j = 0;j<ftheme.roomadjectives.size();j++)cout << ftheme.roomadjectives[j]<< endl;
+            cout << endl;
+            for(int j = 0;j<ftheme.trap_mechas.size();j++)cout << ftheme.trap_mechas[j]<< endl;
+            cout << endl;
+            for(int j = 0;j<ftheme.creatures.size();j++)cout << ftheme.creatures[j]<< endl;
+            cout << endl;
+            for(int j = 0;j<ftheme.adj_entrance.size();j++)cout << ftheme.adj_entrance[j]<< endl;
+            cout << endl;
+
+}
+inline void GrabText(vector<string>& strBuffer,string& fcurStr,char fcurChar,FSM_Process_States& fcurState){
     if(fcurChar == ','){
          strBuffer.push_back(fcurStr);
          fcurStr = "";
@@ -83,105 +99,70 @@ void Process_File(char* filename){
                     break;
                 case OBJADJS:
 
-                    /*if(cc == ','){
-                        tTheme.objadjs.push_back(curStr);
-                        curStr = "";
-                    }else if(cc == ';'){
-                      tTheme.objadjs.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }*/
-                        CopyInText(tTheme.objadjs,curStr,cc,curState);
+                    GrabText(tTheme.objadjs,curStr,cc,curState);
                     break;
                 case ROOMADJS:
-                    if(cc == ','){
-                        tTheme.roomadjectives.push_back(curStr);
-                        curStr = "";
-                    }else if(cc == ';'){
-                      tTheme.roomadjectives.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }
+
+                    GrabText(tTheme.roomadjectives,curStr,cc,curState);
                     break;
                 case TRAPMECHAS:
-                    if(cc == ','){
-                        tTheme.trap_mechas.push_back(curStr);
-                        curStr = "";
 
-                    }else if(cc == ';'){
-                      tTheme.trap_mechas.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }
+                    GrabText(tTheme.trap_mechas,curStr,cc,curState);
+
                     break;
                 case OBJS:
-                    if(cc == ','){
-                        tTheme.objs.push_back(curStr);
-                        curStr = "";
-                    }else if(cc == ';'){
-                      tTheme.objs.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }
+
+                    GrabText(tTheme.objs,curStr,cc,curState);
                     break;
                 case CREATURES:
-                    if(cc == ','){
-                        tTheme.creatures.push_back(curStr);
-                        curStr = "";
-                    }else if(cc == ';'){
-                      tTheme.creatures.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }
+
+                    GrabText(tTheme.creatures,curStr,cc,curState);
                     break;
                 case DOORADJS:
-                    if(cc == ','){
-                        tTheme.adj_entrance.push_back(curStr);
-                        curStr = "";
-                    }else if(cc == ';'){
-                      tTheme.adj_entrance.push_back(curStr);
-                      curStr = "";
-                      curState = CHECK_STATE;
-                    }else{
-                        curStr += cc;
-                    }
+
+                    GrabText(tTheme.adj_entrance,curStr,cc,curState);
                     break;
                 case CHECK_STATE:
                         if(cc != ' ' && cc != '\n' && cc != '\t')curStr += cc;
 
                         if(!curStr.compare("Objects:")){
-                            curState = OBJS;
-                            curStr = "";
+
+                             curState = OBJS;
+                             curStr = "";
+
                         }else if(!curStr.compare("RoomAdjectives:")){
+
                              curState = ROOMADJS;
                              curStr = "";
+
                         }else if(!curStr.compare("TrapMechanisms:")){
+
                              curState = TRAPMECHAS;
                              curStr = "";
+
                         }else if(!curStr.compare("Creatures:")){
+
                              curState = CREATURES;
                              curStr = "";
+
                         }else if(!curStr.compare("DoorAdjectives:")){
+
                              curState = DOORADJS;
                              curStr = "";
+
                         }else if(!curStr.compare("ObjectAdjectives:")){
+
                              curState = OBJADJS;
                              curStr = "";
+
                         }else if(cc == '}'){
+
                             curState = NULLSTATE;
                             curStr = "";
+
                             themes.push_back(tTheme);
                             tTheme = Theme();
+
                         }
                     break;
 
@@ -191,35 +172,8 @@ void Process_File(char* filename){
 
         }
         for(int i = 0;i<themes.size();i++){
-            cout << themes[i].theme<< endl;
-            for(int j = 0;j<themes[i].objadjs.size();j++)cout << themes[i].objadjs[j]<< endl;
-             cout << endl;
-            for(int j = 0;j<themes[i].objs.size();j++)cout << themes[i].objs[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<themes[i].roomadjectives.size();j++)cout << themes[i].roomadjectives[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<themes[i].trap_mechas.size();j++)cout << themes[i].trap_mechas[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<themes[i].creatures.size();j++)cout << themes[i].creatures[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<themes[i].adj_entrance.size();j++)cout << themes[i].adj_entrance[j]<< endl;
-            cout << endl;
-            }
-/*
-
-struct Theme{
-    string         theme;
-    vector<string> objadjs;
-    vector<string> objs;
-    vector<string> roomadjectives;
-    vector<string> trap_mechas;
-    vector<string> creatures;
-    vector<string> adj_entrance;
-    Theme(){
-        theme = "";
-    }
-};*/
-
+          PrintTheme(themes[i]);
+        }
     }else return;
 
 }

@@ -79,22 +79,23 @@ void PrintRoom(Room& froom, int curRoomNum){
     cout << " door";
     for(int i = 0;i<froom.connectingRooms.size();i++)PrintRoom((*froom.connectingRooms[i]),curRoomNum+i+1);
 }
-void OutputDungeon(Room &froom,char* filename){
-FILE* f;
-f = fopen(filename);
-
-fclose(f);
-}
 void OutputRooms(Room& froom, int curRoomNum,FILE* f){
     fprintf(f,"\nRoom %i\n",curRoomNum);
     for(int i = 0;i<froom.creatures.size();i++){fprintf(f,froom.creatures[i].c_str());fprintf(f,"\n");}
-    for(int i = 0;i<froom.roomadjs.size();i++){fprintf(f,froom.creatures[i].c_str());fprintf(f,"\n");}
-    for(int i = 0;i<froom.objs.size();i++){fprintf(f,froom.creatures[i].c_str());fprintf(f,"\n");}
+    for(int i = 0;i<froom.roomadjs.size();i++){fprintf(f,froom.roomadjs[i].c_str());fprintf(f,"\n");}
+    for(int i = 0;i<froom.objs.size();i++){fprintf(f,froom.objs[i].c_str());fprintf(f,"\n");}
     fprintf(f,"Has a ");
-    for(int i = 0;i<froom.entrance.size();i++){fprintf(f,froom.creatures[i].c_str());fprintf(f," ");}
-     fprintf(f," door");
-    for(int i = 0;i<froom.connectingRooms.size();i++)PrintRoom((*froom.connectingRooms[i]),curRoomNum+i+1);
+    for(int i = 0;i<froom.entrance.size();i++){fprintf(f,froom.entrance[i].c_str());fprintf(f," ");}
+    fprintf(f," door");
+    for(int i = 0;i<froom.connectingRooms.size();i++)OutputRooms((*froom.connectingRooms[i]),curRoomNum+i+1,f);
 }
+void OutputDungeon(Room &froom,const char* filename){
+FILE* f;
+f = fopen(filename,"w");
+OutputRooms(froom,1,f);
+fclose(f);
+}
+
 int main()
 {
     vector<Theme> themes;
@@ -103,5 +104,7 @@ int main()
     themes = Process_File("text.txt");
     Room cRoom = GenerateRoomList(themes);
     PrintRoom(cRoom,1);
+    string outText = "outroom";
+    OutputDungeon(cRoom,(outText + (char)(rand()%9+'0') + (char)(rand()%9+'0') + ".txt").c_str());
     return 0;
 }

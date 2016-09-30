@@ -1,0 +1,567 @@
+
+Room 1
+ghouls
+charred
+obsidian vloor
+burnished rocks
+Has a Old gnarled gnarled  door
+Room 2
+ghouls
+afrit
+ghouls
+obsidian vloor
+smells of brimstone
+obsidian vloor
+flaming rocks
+Has a dusty  door
+Room 3
+afrit
+ghouls
+afrit
+ghouls
+charred
+smells of brimstone
+burnished cathedral forge
+composed of tungsten and iridium cathedral forge
+flaming rocks
+charred lava
+Has a clean gnarled  door
+Room 4
+ghouls
+ghouls
+charred
+charred
+burnished lava
+composed of tungsten and iridium hooks on wall
+Has a dusty Old dusty  door
+Room 5
+afrit
+ghouls
+obsidian vloor
+obsidian vloor
+smells of brimstone
+charred
+burnished rocks
+flaming lava
+flaming hooks on wall
+Has a Old dusty Old Old  door
+Room 6
+ghouls
+afrit
+afrit
+afrit
+smells of brimstone
+obsidian vloor
+obsidian vloor
+obsidian vloor
+flaming lava
+composed of tungsten and iridium cathedral forge
+Has a Old dusty gnarled  door
+Room 7
+afrit
+charred
+hot
+impossible
+obsidian vloor
+smells of brimstone
+flaming lava
+charred lava
+Has a dusty gnarled Old  door
+Room 6
+ghouls
+afrit
+afrit
+impossible
+smells of brimstone
+charred
+composed of tungsten and iridium cathedral forge
+flaming cathedral forge
+composed of tungsten and iridium lava
+Has a clean gnarled  door
+Room 7
+afrit
+afrit
+ghouls
+charred
+impossible
+composed of tungsten and iridium hooks on wall
+Has a clean dusty clean  door
+Room 8
+ghouls
+afrit
+afrit
+ghouls
+impossible
+smells of brimstone
+charred rocks
+Has a gnarled  door
+Room 4
+afrit
+ghouls
+obsidian vloor
+hot
+charred
+smells of brimstone
+obsidian vloor
+burnished rocks
+charred hooks on wall
+composed of tungsten and iridium cathedral forge
+flaming hooks on wall
+Has a clean  door
+Room 3
+ghouls
+afrit
+ghouls
+ghouls
+impossible
+charred
+composed of tungsten and iridium rocks
+Has a Old  door
+Room 4
+ghouls
+ghouls
+impossible
+smells of brimstone
+charred
+burnished cathedral forge
+charred cathedral forge
+burnished hooks on wall
+charred rocks
+Has a dusty  door
+Room 5
+afrit
+afrit
+afrit
+obsidian vloor
+impossible
+flaming rocks
+composed of tungsten and iridium rocks
+charred cathedral forge
+composed of tungsten and iridium hooks on wall
+Has a dusty Old clean  door
+Room 6
+ghouls
+afrit
+charred
+obsidian vloor
+charred
+impossible
+obsidian vloor
+flaming hooks on wall
+Has a dusty clean gnarled  door
+Room 7
+ghouls
+ghouls
+ghouls
+smells of brimstone
+obsidian vloor
+impossible
+flaming lava
+Has a clean dusty gnarled dusty  door
+Room 8
+ghouls
+obsidian vloor
+charred
+obsidian vloor
+flaming lava
+flaming hooks on wall
+charred hooks on wall
+Has a clean dusty  door
+Room 9
+ghouls
+ghouls
+charred
+obsidian vloor
+composed of tungsten and iridium hooks on wall
+flaming lava
+burnished lava
+flaming lava
+Has a gnarled Old dusty gnarled  door
+Room 10
+afrit
+ghouls
+smells of brimstone
+obsidian vloor
+charred
+flaming cathedral forge
+flaming cathedral forge
+charred lava
+Has a Old  door
+Room 11
+afrit
+ghouls
+afrit
+obsidian vloor
+impossible
+charred
+flaming rocks
+Has a clean dusty  door
+Room 10
+ghouls
+afrit
+afrit
+afrit
+smells of brimstone
+obsidian vloor
+charred
+burnished lava
+burnished lava
+Has a Old dusty clean  door
+Room 11
+afrit
+afrit
+afrit
+smells of brimstone
+charred
+hot
+charred
+charred
+composed of tungsten and iridium hooks on wall
+burnished lava
+flaming cathedral forge
+Has a gnarled gnarled dusty  door
+Room 6
+afrit
+ghouls
+ghouls
+ghouls
+charred
+impossible
+composed of tungsten and iridium hooks on wall
+flaming hooks on wall
+composed of tungsten and iridium lava
+flaming hooks on wall
+Has a gnarled clean  door
+Room 4
+ghouls
+hot
+obsidian vloor
+charred
+hot
+charred
+burnished lava
+Has a dusty clean gnarled  door
+Room 5
+afrit
+ghouls
+ghouls
+afrit
+hot
+hot
+burnished rocks
+burnished cathedral forge
+flaming rocks
+Has a Old dusty Old clean  door
+Room 6
+ghouls
+afrit
+ghouls
+hot
+charred
+charred
+hot
+composed of tungsten and iridium cathedral forge
+Has a Old gnarled dusty  door
+Room 7
+afrit
+ghouls
+impossible
+hot
+hot
+burnished rocks
+Has a Old gnarled gnarled clean  door
+Room 8
+ghouls
+ghouls
+ghouls
+smells of brimstone
+hot
+charred
+impossible
+charred lava
+charred rocks
+composed of tungsten and iridium hooks on wall
+composed of tungsten and iridium hooks on wall
+Has a gnarled Old gnarled  door
+Room 9
+ghouls
+ghouls
+afrit
+impossible
+hot
+hot
+flaming hooks on wall
+flaming hooks on wall
+Has a gnarled dusty Old Old  door
+Room 8
+ghouls
+obsidian vloor
+charred
+hot
+burnished hooks on wall
+Has a gnarled Old Old dusty  door
+Room 9
+afrit
+afrit
+hot
+impossible
+obsidian vloor
+flaming hooks on wall
+flaming hooks on wall
+Has a clean gnarled  door
+Room 9
+ghouls
+afrit
+afrit
+afrit
+smells of brimstone
+smells of brimstone
+charred
+impossible
+charred
+flaming hooks on wall
+charred lava
+composed of tungsten and iridium cathedral forge
+Has a clean clean clean Old  door
+Room 10
+ghouls
+ghouls
+afrit
+afrit
+obsidian vloor
+smells of brimstone
+obsidian vloor
+charred
+composed of tungsten and iridium lava
+burnished rocks
+flaming cathedral forge
+Has a dusty gnarled  door
+Room 11
+ghouls
+impossible
+smells of brimstone
+impossible
+flaming lava
+Has a clean dusty dusty clean  door
+Room 12
+ghouls
+charred
+charred
+charred
+charred
+composed of tungsten and iridium lava
+Has a dusty  door
+Room 7
+afrit
+afrit
+ghouls
+afrit
+hot
+impossible
+charred
+hot
+burnished lava
+flaming lava
+Has a clean Old Old  door
+Room 8
+ghouls
+ghouls
+afrit
+afrit
+obsidian vloor
+charred
+hot
+impossible
+charred lava
+composed of tungsten and iridium lava
+Has a gnarled gnarled Old gnarled  door
+Room 6
+ghouls
+hot
+hot
+burnished cathedral forge
+Has a clean  door
+Room 7
+ghouls
+afrit
+ghouls
+ghouls
+hot
+hot
+composed of tungsten and iridium rocks
+composed of tungsten and iridium rocks
+charred lava
+burnished hooks on wall
+Has a gnarled clean Old dusty  door
+Room 8
+afrit
+afrit
+ghouls
+afrit
+obsidian vloor
+hot
+charred cathedral forge
+Has a clean gnarled  door
+Room 9
+ghouls
+ghouls
+afrit
+ghouls
+charred
+hot
+charred lava
+Has a dusty gnarled clean  door
+Room 10
+ghouls
+ghouls
+ghouls
+impossible
+smells of brimstone
+hot
+charred cathedral forge
+composed of tungsten and iridium lava
+charred lava
+composed of tungsten and iridium cathedral forge
+Has a clean  door
+Room 9
+afrit
+impossible
+smells of brimstone
+hot
+hot
+flaming hooks on wall
+Has a dusty Old dusty  door
+Room 10
+ghouls
+obsidian vloor
+obsidian vloor
+hot
+smells of brimstone
+flaming rocks
+flaming rocks
+charred lava
+composed of tungsten and iridium hooks on wall
+Has a gnarled dusty Old clean  door
+Room 11
+afrit
+afrit
+hot
+impossible
+burnished hooks on wall
+flaming cathedral forge
+charred rocks
+charred hooks on wall
+Has a dusty gnarled gnarled  door
+Room 12
+ghouls
+ghouls
+afrit
+afrit
+hot
+hot
+obsidian vloor
+smells of brimstone
+burnished rocks
+charred hooks on wall
+Has a dusty  door
+Room 10
+ghouls
+ghouls
+charred
+hot
+burnished rocks
+burnished rocks
+flaming lava
+Has a Old  door
+Room 11
+ghouls
+afrit
+afrit
+smells of brimstone
+charred
+flaming lava
+Has a Old Old  door
+Room 12
+ghouls
+afrit
+ghouls
+afrit
+obsidian vloor
+impossible
+smells of brimstone
+impossible
+hot
+burnished lava
+flaming lava
+burnished hooks on wall
+burnished lava
+Has a dusty  door
+Room 13
+ghouls
+ghouls
+ghouls
+afrit
+hot
+obsidian vloor
+charred
+flaming lava
+Has a gnarled dusty dusty  door
+Room 8
+ghouls
+ghouls
+smells of brimstone
+hot
+flaming lava
+burnished lava
+composed of tungsten and iridium hooks on wall
+flaming hooks on wall
+Has a clean clean dusty clean  door
+Room 9
+afrit
+afrit
+afrit
+smells of brimstone
+smells of brimstone
+smells of brimstone
+flaming cathedral forge
+composed of tungsten and iridium cathedral forge
+burnished rocks
+charred lava
+Has a Old Old  door
+Room 10
+afrit
+afrit
+afrit
+afrit
+smells of brimstone
+impossible
+smells of brimstone
+smells of brimstone
+burnished lava
+flaming cathedral forge
+flaming cathedral forge
+charred cathedral forge
+Has a Old gnarled  door
+Room 11
+ghouls
+hot
+smells of brimstone
+composed of tungsten and iridium hooks on wall
+flaming hooks on wall
+burnished lava
+charred hooks on wall
+Has a dusty clean gnarled  door
+Room 12
+ghouls
+afrit
+ghouls
+charred
+obsidian vloor
+charred
+obsidian vloor
+smells of brimstone
+flaming rocks
+flaming hooks on wall
+burnished lava
+composed of tungsten and iridium cathedral forge
+Has a Old dusty dusty  door

@@ -1,179 +1,65 @@
 #include <iostream>
-#include <string>
-#include <vector>
+
 #include <stdio.h>
 #include <stdlib.h>
 
 using namespace std;
-struct Theme{
-    string         theme;
-    vector<string> objadjs;
+#include "ProcessFiles.h"
+vector<Theme> themes;
+vector<Creature> creatures;
+struct Room{
+    Room* roomCameFrom;
     vector<string> objs;
-    vector<string> roomadjectives;
-    vector<string> trap_mechas;
     vector<string> creatures;
-    vector<string> adj_entrance;
-    Theme(){
-        theme = "";
+    vector<string> entrance;
+    vector<string> roomadjs;
+    vector<Room*> connectingRooms;
+    Room(){
+        roomCameFrom = NULL;
     }
 };
-struct Creature{
-    string* adjectives;
-    int CR;
-};
-vector<Creature> creatures;
-vector<Theme> themes;
-void Process_File(char* filename);
+vector<string> MergeStrVectors(vector<string>& v1,vector<string>& v2){
+    vector<string> tV;
+    for(int i = 0;i<v1.size();i++)tV.push_back(v1[i]);
+    for(int i = 0;i<v2.size();i++)tV.push_back(v2[i]);
+    return tV;
+}
+void GenRoom(Room& curRoom,Theme& curTheme,int numroomsleft){
+   if(numroomsleft){
+    int cRand = rand()%4+1;
+    for(int i = 0;i<cRand;i++)curRoom.creatures.push_back(curTheme.creatures[rand()%curTheme.creatures.size()]);
+    cRand = rand()%4+1;
+    for(int i = 0;i<cRand;i++)curRoom.objs.push_back(curTheme.objadjs[rand()%curTheme.objadjs.size()] + " " + curTheme.objs[rand()%curTheme.objs.size()]);
+    cRand = rand()%4+1;
+    for(int i = 0;i<cRand;i++)curRoom.entrance.push_back(curTheme.entrance[rand()%curTheme.entrance.size()]);
+    cRand = rand()%4+1;
+    for(int i = 0;i<cRand;i++)curRoom.roomadjs.push_back(curTheme.roomadjs[rand()%curTheme.roomadjs.size()]);
+    cRand = rand()%4+1;
+    if(curRoom.roomCameFrom){
+        curRoom.roomadjs.push_back(curRoom.roomCameFrom->roomadjs[rand()%curRoom.roomCameFrom->roomadjs.size()]);
+    }
+   }
+
+}
+Room GenerateRoomList(vector<Theme> fthemes){
+    Theme generalTheme;
+    Room startRoom;
+    int randomTheme1=rand()%fthemes.size(),randomTheme2=rand()%fthemes.size();
+    generalTheme.theme          = fthemes[randomTheme1].theme + fthemes[randomTheme2].theme;
+    generalTheme.creatures      = MergeStrVectors(fthemes[randomTheme1].creatures,      fthemes[randomTheme1].creatures);
+    generalTheme.adj_entrance   = MergeStrVectors(fthemes[randomTheme1].adj_entrance,   fthemes[randomTheme1].adj_entrance);
+    generalTheme.objadjs        = MergeStrVectors(fthemes[randomTheme1].objadjs,        fthemes[randomTheme1].objadjs);
+    generalTheme.objs           = MergeStrVectors(fthemes[randomTheme1].objs,           fthemes[randomTheme1].objs);
+    generalTheme.roomadjectives = MergeStrVectors(fthemes[randomTheme1].roomadjectives, fthemes[randomTheme1].roomadjectives);
+    generalTheme.trap_mechas    = MergeStrVectors(fthemes[randomTheme1].trap_mechas,    fthemes[randomTheme1].trap_mechas);
+    int roomNum = rand()%10 + 1;
+
+
+}
 int main()
 {
     cout << "Hello world!" << endl;
-    Process_File("text.txt");
+    themes = Process_File("text.txt");
+
     return 0;
-}
-
-enum FSM_Process_States{
-    NULLSTATE,
-    THEME,
-    OBJS,
-    OBJADJS,
-    ROOMADJS,
-    TRAPMECHAS,
-    CREATURES,
-    DOORADJS,
-    CHECK_STATE
-};
-void PrintTheme(Theme ftheme){
-            cout << ftheme.theme<< endl;
-            for(int j = 0;j<ftheme.objadjs.size();j++)cout << ftheme.objadjs[j]<< endl;
-             cout << endl;
-            for(int j = 0;j<ftheme.objs.size();j++)cout << ftheme.objs[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<ftheme.roomadjectives.size();j++)cout << ftheme.roomadjectives[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<ftheme.trap_mechas.size();j++)cout << ftheme.trap_mechas[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<ftheme.creatures.size();j++)cout << ftheme.creatures[j]<< endl;
-            cout << endl;
-            for(int j = 0;j<ftheme.adj_entrance.size();j++)cout << ftheme.adj_entrance[j]<< endl;
-            cout << endl;
-
-}
-inline void GrabText(vector<string>& strBuffer,string& fcurStr,char fcurChar,FSM_Process_States& fcurState){
-    if(fcurChar == ','){
-         strBuffer.push_back(fcurStr);
-         fcurStr = "";
-    }else if(fcurChar == ';'){
-         strBuffer.push_back(fcurStr);
-         fcurStr = "";
-         fcurState = CHECK_STATE;
-     }else{
-         fcurStr += fcurChar;
-     }
-}
-void Process_File(char* filename){
-    FILE* f ;
-    f = fopen(filename,"r");
-    if(f != NULL){
-        char cc = 0;
-        string curStr = "";
-        FSM_Process_States curState = NULLSTATE;
-        Theme tTheme = Theme();
-        while((cc=fgetc(f))!=EOF){
-            switch(curState){
-                case NULLSTATE:
-                    curStr = "";
-                    if(cc == '['){
-                        curState = THEME;
-                    }
-
-                    break;
-                case THEME:
-                    if(cc == '{'){
-                        tTheme.theme = curStr;
-                        curStr = "";
-                        curState = CHECK_STATE;
-                    }else if(cc != ' ' && cc != '\t'){
-                        curStr+=cc;
-                    }
-
-                    break;
-                case OBJADJS:
-
-                    GrabText(tTheme.objadjs,curStr,cc,curState);
-                    break;
-                case ROOMADJS:
-
-                    GrabText(tTheme.roomadjectives,curStr,cc,curState);
-                    break;
-                case TRAPMECHAS:
-
-                    GrabText(tTheme.trap_mechas,curStr,cc,curState);
-
-                    break;
-                case OBJS:
-
-                    GrabText(tTheme.objs,curStr,cc,curState);
-                    break;
-                case CREATURES:
-
-                    GrabText(tTheme.creatures,curStr,cc,curState);
-                    break;
-                case DOORADJS:
-
-                    GrabText(tTheme.adj_entrance,curStr,cc,curState);
-                    break;
-                case CHECK_STATE:
-                        if(cc != ' ' && cc != '\n' && cc != '\t')curStr += cc;
-
-                        if(!curStr.compare("Objects:")){
-
-                             curState = OBJS;
-                             curStr = "";
-
-                        }else if(!curStr.compare("RoomAdjectives:")){
-
-                             curState = ROOMADJS;
-                             curStr = "";
-
-                        }else if(!curStr.compare("TrapMechanisms:")){
-
-                             curState = TRAPMECHAS;
-                             curStr = "";
-
-                        }else if(!curStr.compare("Creatures:")){
-
-                             curState = CREATURES;
-                             curStr = "";
-
-                        }else if(!curStr.compare("DoorAdjectives:")){
-
-                             curState = DOORADJS;
-                             curStr = "";
-
-                        }else if(!curStr.compare("ObjectAdjectives:")){
-
-                             curState = OBJADJS;
-                             curStr = "";
-
-                        }else if(cc == '}'){
-
-                            curState = NULLSTATE;
-                            curStr = "";
-
-                            themes.push_back(tTheme);
-                            tTheme = Theme();
-
-                        }
-                    break;
-
-
-            }
-            cout << curStr << endl;
-
-        }
-        for(int i = 0;i<themes.size();i++){
-          PrintTheme(themes[i]);
-        }
-    }else return;
-
 }

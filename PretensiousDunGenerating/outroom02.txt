@@ -1,0 +1,56 @@
+
+
+Room 1
+ghouls
+afrit
+afrit
+smells of brimstone
+hot
+hot
+flaming rocks
+burnished lava
+charred lava
+Has a gnarled  door
+
+Room 2
+afrit
+ghouls
+hot
+smells of brimstone
+composed of tungsten and iridium lava
+composed of tungsten and iridium cathedral forge
+flaming lava
+Has a clean dusty dusty Old  door
+
+Room 3
+afrit
+afrit
+afrit
+charred
+impossible
+impossible
+smells of brimstone
+composed of tungsten and iridium rocks
+charred lava
+Has a dusty  door
+
+Room 4
+ghouls
+afrit
+hot
+charred
+composed of tungsten and iridium rocks
+burnished rocks
+Has a gnarled gnarled clean  door
+
+Room 5
+afrit
+afrit
+afrit
+impossible
+hot
+smells of brimstone
+charred cathedral forge
+flaming cathedral forge
+charred hooks on wall
+Has a Old clean clean  door

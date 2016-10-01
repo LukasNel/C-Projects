@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 using namespace std;
 #include "ProcessFiles.h"
@@ -25,6 +26,9 @@ vector<string> MergeStrVectors(vector<string>& v1,vector<string>& v2){
     for(int i = 0;i<v2.size();i++)tV.push_back(v2[i]);
     return tV;
 }
+void GenCreaturesRoom(Room& curRoom,Theme& curTheme){
+
+}
 void GenRoom(Room& curRoom,Theme& curTheme,int numroomsleft){
 
     int cRand = rand()%4+1;
@@ -40,7 +44,7 @@ void GenRoom(Room& curRoom,Theme& curTheme,int numroomsleft){
         curRoom.roomadjs.push_back(curRoom.roomCameFrom->roomadjs[rand()%curRoom.roomCameFrom->roomadjs.size()]);
     }
     if(numroomsleft){
-        cRand = rand()%4;
+        cRand = rand()%3+1;
         for(int i = 0;i<cRand;i++){
             Room* nextRoom = new Room();
             nextRoom->roomCameFrom = &curRoom;
@@ -66,11 +70,12 @@ Room GenerateRoomList(vector<Theme> fthemes){
     generalTheme.roomadjectives = MergeStrVectors(fthemes[randomTheme1].roomadjectives, fthemes[randomTheme1].roomadjectives);
     generalTheme.trap_mechas    = MergeStrVectors(fthemes[randomTheme1].trap_mechas,    fthemes[randomTheme1].trap_mechas);
     int roomNum = rand()%5 + 1;
+
     GenRoom(startRoom,generalTheme,roomNum);
     return startRoom;
 }
 void PrintRoom(Room& froom, int curRoomNum){
-    cout << endl << "Room " << curRoomNum << endl;
+    cout << endl << "\nRoom " << curRoomNum << endl;
     for(int i = 0;i<froom.creatures.size();i++)cout << froom.creatures[i] << endl;
     for(int i = 0;i<froom.roomadjs.size();i++)cout << froom.roomadjs[i] << endl;
     for(int i = 0;i<froom.objs.size();i++)cout << froom.objs[i] << endl;
@@ -80,7 +85,7 @@ void PrintRoom(Room& froom, int curRoomNum){
     for(int i = 0;i<froom.connectingRooms.size();i++)PrintRoom((*froom.connectingRooms[i]),curRoomNum+i+1);
 }
 void OutputRooms(Room& froom, int curRoomNum,FILE* f){
-    fprintf(f,"\nRoom %i\n",curRoomNum);
+    fprintf(f,"\n\nRoom %i\n",curRoomNum);
     for(int i = 0;i<froom.creatures.size();i++){fprintf(f,froom.creatures[i].c_str());fprintf(f,"\n");}
     for(int i = 0;i<froom.roomadjs.size();i++){fprintf(f,froom.roomadjs[i].c_str());fprintf(f,"\n");}
     for(int i = 0;i<froom.objs.size();i++){fprintf(f,froom.objs[i].c_str());fprintf(f,"\n");}
@@ -98,6 +103,7 @@ fclose(f);
 
 int main()
 {
+    srand(GetTickCount());
     vector<Theme> themes;
     vector<Creature> creatures;
     cout << "Hello world!" << endl;

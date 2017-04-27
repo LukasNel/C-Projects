@@ -1,4 +1,5 @@
 [Fire{
+SASASASSSSSASASASASASAS
 Objects:hooks on wall,lava,rocks,cathedral forge;
 RoomAdjectives:hot,obsidian vloor,charred,smells of brimstone,impossible;
 TrapMechanisms:melting,charring;
